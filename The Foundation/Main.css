@@ -1,0 +1,40 @@
+/* This is a comment*/
+body{
+    background-color:rgb(24, 85, 0) ;
+    text-align: center;
+    color: blanchedalmond;
+}
+
+nav {
+height: 200px;
+width: 200px;
+float: left;
+padding: 10px;
+line-height: 20px;
+}
+
+footer{
+    text-align: center;
+    margin-right: 200px;
+}
+
+img{
+    margin-right: 0px;
+}
+
+a{
+    color:rgb(91, 91, 255);
+}
+        main{
+            list-style-type: none;
+            text-decoration: none;
+            text-align: center;
+            position: absolute;
+            top: 120vh;
+            left: 104vh;
+            }
+        img:hover{
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }

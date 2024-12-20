@@ -1,0 +1,131 @@
+<!--Noah Walker-->
+<!--Create your html code by including doctype, html tags, header tags, and body tags.-->
+<!DOCTYPE html>
+<html style="background-color: rgb(5, 37, 5);">
+    <head>
+        <!--add a title for your page remember this is only the tab name.-->
+        <title>Fellow Ship of the Ring</title>
+        <link rel="stylesheet" href="Main.css">
+    </head>
+    <body style="color:rgb(105, 75, 55)">
+        <li><a href="../home.html"><img src="../icons8-home_events.png"></a></li>
+        <!--Header tag will show your title on your webpage-->
+        <header>
+            <!--h1 means header 1 and is the largest header type-->
+            <h1>Fellow Ship of the Ring Application</h1>
+            <!--p stands for paragraph and is where you type long bits of text.-->
+            <p> Welcome to the shire weary traveler. 
+                You must have heard about the opening in the fellow ship. 
+                Do fill out the form below and you shall hear back promptly. 
+                Best of luck on your journey! </p>
+        </header>
+            <!--Main is where your body code will go-->
+        <main>
+            <!--h2 is a smaller header than h1-->
+            <h2>Registration Form</h2>
+            <hr>
+            <!--Create a label and input box for first name-->
+            <label>first Name</label><br>
+            <input type="text" id="firstName"><br><br>
+            <!--Create a label and input box for last name-->
+            <label>last Name</label><br>
+            <input type="text" id="lastName"><br><br>
+            <!--And so on-->
+            <label>Where in Middle Earth do you Hail</label><br><br>
+            <input type="text" id="Location"><br><br>
+            <hr>
+
+            <!--create button to submit form-->
+            <button onclick="checkForm()">Test worthiness</button>
+            <!--Create a script tag to go into java-->
+            <script>
+                //We are now in JavaScript
+                //Create function to check form
+                function checkForm(){
+                    // Get first name from form
+                    var firstName = document.getElementById("firstName").value;
+                    //Get last name
+                    var lastName = document.getElementById("lastName").value;
+                    //get location
+                    var Location = document.getElementById("Location").value;
+                    //check for length
+                                        //Check for foes and friends and remember copy and paste is your friend here
+                    if(firstName.toLowerCase() === "gollum"){
+                    alert("Ah, Gollum, is it? A sly trickster indeed! You may think to deceive us, but know this: you are no friend of the Fellowship. Be gone with your treachery!");
+                    return;
+                    }
+                    if(firstName.toLowerCase() === "golem"){
+                        alert("Ah, Golem, is it? A sly trickster indeed! You may think to deceive us, but know this: you are no friend of the Fellowship. Be gone with your treachery!");
+                        return;
+                    }
+                    if(firstName.toLowerCase() === "frodo"){
+                        alert("Ah, Frodo, my dear Hobbit! What mischief brings you to fill out this form? You ought to know that you are always welcomed with open arms into the Fellowship!");
+                        return;
+                    }
+                    if(firstName.toLowerCase() === "gandalf"){
+                        alert("So you claim to be Gandalf, do you? If you are truly he, then I must ask: who, my dear friend, stands before you now?");
+                        return;
+                    }
+                    if(firstName.toLowerCase() === "aragorn"){
+                        alert("Ah, Aragorn, son of Arathorn! The rightful heir to the throne of Gondor and a true friend to the Fellowship. Tell me, noble ranger, how fares your journey in the shadows of Mordor?");
+                        return;
+                    }
+                    if(firstName.toLowerCase() === "legolas"){
+                        alert("Ah, Legolas! My dear friend of the Woodland Realm, your presence brings joy to my heart. You are always welcome in the Fellowship, for your bravery and wisdom light our path!");
+                        return;
+                    }
+                    if(firstName.toLowerCase() === "gimli"){
+                        alert("Gimli, my stout-hearted dwarf! Your strength and spirit are a boon to the Fellowship. It brings me great joy to see you, and you shall always have a place among us, for you are a true friend!");
+                        return;
+                    }
+                    if(firstName.toLowerCase() === "sauron"){
+                        alert("Sauron! You dare speak your name here? Know this: the light of the Fellowship will pierce your darkness, and we will not cower before your evil!");
+                        return;
+                    }
+                    if(firstName.toLowerCase() === "saruman"){
+                        alert("Saruman! You traitorous wizard! You’ve forsaken your true purpose. The Fellowship will not be swayed by your dark machinations!");
+                        return;
+                    }
+                    if(firstName.toLowerCase() === "pippin"){
+                        alert("Pippin, my dear hobbit! Your mischievous spirit and brave heart are always welcome in the Fellowship. Come, let us share a tale or two!");
+                        return;
+                    }
+                    if(firstName.toLowerCase() === "sam"){
+                        alert("Samwise Gamgee! My steadfast gardener and friend, your loyalty is the heart of the Fellowship. You are always welcome, for no journey is complete without you!");
+                        return;
+                    }
+                    if(firstName.toLowerCase() === "merry"){
+                        alert("Merry, my spirited hobbit! Your courage and laughter are a joy to the Fellowship. You are always welcome to join our adventures!");
+                        return;
+                    }
+                    if(firstName.toLowerCase() === "smeagol"){
+                        alert("Ah, Smeagol! You walk a treacherous path, torn between light and dark. You may seek the Fellowship’s guidance, but tread carefully, for trust is not easily given!")
+                    }
+                    if(firstName.length > 20){
+                        alert("Alas, dear traveler, it seems your first name stretches beyond the bounds of reason for any creature hailing from Middle Earth. I bid you, choose a name more fitting!");
+                        return;
+                    }
+
+                    //Create a variable that puts together the users First and Last name
+                    var fullName = firstName + " " + lastName;
+                    //Here I am creating a math that makes it 50/50 wheter you get accepted or denied in the Fellow Ship
+                    var randomChance = Math.random();
+                    if(randomChance < 0.5) {
+                        alert("Your worthiness has been noted traveler, and I am pleased to welcome one, " + fullName + " hailing from the lands of " + Location + ", to the Fellow Ship! May your journey be filled with adventure!");
+                    }
+                    else {
+                        alert("Alas, " + fullName + ", your path does not lead to the Fellowship this day. Perhaps another time!");
+                    }
+                    
+
+                }
+                
+            </script>
+
+        </main>
+        <footer>
+
+        </footer>
+
+    </body>
+</html>

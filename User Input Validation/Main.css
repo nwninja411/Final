@@ -1,0 +1,41 @@
+/*I am linking a font file to this project*/
+/*@font-face is letting css know that I am creating a new font family*/
+@font-face {
+    /*Here I am naming my font so that I can refernce it*/
+    font-family: 'RingBearer';
+    /*Here I am linking my font file so that when I refernce it it knows what the font looks like*/
+    src: url('RingbearerMedium-51mgZ.ttf') format('truetype');
+    /*these tags let the code know that the style and weight should be normal rather than bold or italic*/
+    font-weight: normal; 
+    font-style: normal; 
+}
+
+/*now that I have setup my new font I can use it to style my index*/
+h1 {
+    /*adding another font family after my custom font is to ensure there is a backup if my font fails to load*/
+    font-family: 'RingBearer', serif;
+    font-size: 45px ;
+}
+
+p {
+    font-family: 'RingBearer', serif;
+    font-size: 20px ;
+}
+
+main {
+    font-family: 'Ringbearer', serif;
+    font-size: 13px
+}
+li, a{
+    list-style-type: none;
+    text-decoration: none;
+    text-align: center;
+    position: absolute;
+    top: 47.5vh;
+    left: 51.5vh;
+    }
+img:hover{
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
