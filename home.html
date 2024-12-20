@@ -1,0 +1,520 @@
+<!--Lets declare our doctype-->
+<!DOCTYPE html>
+<!--Can't forget the HTML tags-->
+<html>
+    <!--add in head and body tags-->
+    <head>
+        <!--Make sure it displays correctly on all devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Name our tab-->
+        <title>Internet of Projects</title>
+    </head>
+    <!--Lets add style to this website and really make it unqiue to me-->
+    <style>
+         @font-face {
+        /*Here I am naming my font so that I can refernce it*/
+        font-family: 'Mangiola';
+        /*Here I am linking my font file so that when I refernce it it knows what the font looks like*/
+        src: url('LEMONMILK-Light.otf') format('truetype');
+        /*these tags let the code know that the style and weight should be normal rather than bold or italic*/
+        font-weight: normal; 
+        font-style: normal; 
+        }
+        @font-face {
+        /*Here I am naming my font so that I can refernce it*/
+        font-family: 'Belgiano';
+        /*Here I am linking my font file so that when I refernce it it knows what the font looks like*/
+        src: url('Belgiano Serif 2.ttf') format('truetype');
+        /*these tags let the code know that the style and weight should be normal rather than bold or italic*/
+        font-weight: normal; 
+        font-style: normal; 
+        }
+        /*.blank targests a specific section and class and .blank <tag> targets a specific tag within a section*/
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            overflow-x: hidden;
+        }
+        button:hover{
+            transform: scale(1.05);
+            box-shadow: rgba(158, 158, 158, 0.678);
+            transition: transform 0.5s ease,box-shadow 0.5s ease;
+            text-shadow: 2px 2px 5px rgba(196, 196, 196, 0.8);
+            transition: text-shadow 0.5s ease;       
+        }
+        .header{
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            position: relative;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            overflow: hidden;
+            left: 50%;
+            right: 50%;
+            background: black;
+        }
+        .header img{
+            width: 100%;
+            height: 900px;
+            object-fit: cover;
+            margin: 0;
+            padding: 0;
+            filter: brightness(70%) blur(10px);
+            z-index: 1;
+        }
+        .header h1{
+            font-size: 3em;
+            color: white;
+            font-family: 'Mangiola' , serif;
+            position: absolute;
+            margin: 0;
+            top: 20px;
+            left: 35px;
+            z-index: 2;
+        }
+        .header h2{
+            font-size: 5em;
+            color: white;
+            font-family: 'Mangiola' , serif;
+            position: absolute;
+            margin: 0;
+            padding-top: 350px;
+            padding-left: 367px;
+            z-index: 2;
+        }
+        .header h3{
+            font-size: 1.5em;
+            color: rgb(155, 155, 155);
+            font-family: 'Belgiano' , serif;
+            position: absolute;
+            margin: 0;
+            padding-top: 460px;
+            padding-left: 370px;
+            z-index: 2;
+        }
+        .header .About{
+            position: absolute;
+            margin: 0;
+            top: 20px;
+            left: 1430px;
+            background-color: rgb(58, 58, 58);
+            border: 2px solid rgb(84, 84, 84);
+            font-family: 'Mangiola' , serif;
+            font-size: 1rem;
+            border-radius: 5px;
+            color: white;
+            z-index: 2;
+            padding: 10px 20px;
+        }
+        .header .Gallery{
+            position: absolute;
+            margin: 0;
+            top: 20px;
+            left: 1585px;
+            background-color: rgb(58, 58, 58);
+            border: 2px solid rgb(84, 84, 84);
+            font-family: 'Mangiola' , serif;
+            font-size: 1rem;
+            border-radius: 5px;
+            color: white;
+            z-index: 2;
+            padding: 10px 20px;
+        }
+        .header .Contact{
+            position: absolute;
+            margin: 0;
+            top: 20px;
+            left: 1730px;
+            background-color: rgb(58, 58, 58);
+            border: 2px solid rgb(84, 84, 84);
+            font-family: 'Mangiola' , serif;
+            font-size: 1rem;
+            border-radius: 5px;
+            color: white;
+            z-index: 2;
+            padding: 10px 20px;
+        }
+        .header .Linkedin{
+            position: absolute;
+            margin: 0;
+            top: 505px;
+            left: 367px;
+            background-color: rgb(58, 58, 58);
+            border: 2px solid rgb(84, 84, 84);
+            font-family: 'Mangiola' , serif;
+            font-size: 1rem;
+            border-radius: 5px;
+            color: white;
+            z-index: 2;
+            padding: 10px 20px;
+        }
+        .about{
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            position: relative;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            overflow: hidden;
+            left: 50%;
+            right: 50%;
+            background: black;
+        }
+        .about img{
+            width: 100%;
+            height: 900px;
+            object-fit: cover;
+            margin: 0;
+            padding: 0;
+            filter: brightness(75%) blur(8px);
+            z-index: 1;
+        }
+        .about .SelfPic{
+            top: 60px;
+            left: 1050px;
+            width: 800px;
+            height: 820px;
+            object-fit: contain;
+            z-index: 2;
+            position: absolute;
+            filter: brightness(100%) blur(0px);
+        }
+        .about h2{
+            font-size: 3em;
+            color: white;
+            font-family: 'Mangiola' , serif;
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            top: 80px;
+            left: 50px;
+            z-index: 2;
+        }
+        .about h3{
+            font-size: 1.65em;
+            color: white;
+            font-family: 'Belgiano' , serif;
+            position: absolute;
+            margin: 0;
+            top: 230px;
+            left: 50px;
+            z-index: 2;
+            max-width: 1050px;
+        }
+        .about button{
+            position: absolute;
+            margin: 0;
+            top: 840px;
+            left: 50px;
+            background-color: rgb(58, 58, 58);
+            border: 2px solid rgb(84, 84, 84);
+            font-family: 'Mangiola' , serif;
+            font-size: 1rem;
+            border-radius: 5px;
+            color: white;
+            z-index: 2;
+            padding: 10px 20px;
+        }
+        .Projects {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 1750px;
+            position: relative;
+            overflow: hidden;
+            background: black;
+        }
+
+        .Projects .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1750px;
+            object-fit: cover;
+            filter: brightness(70%) blur(10px);
+            z-index: 1;
+        }
+
+        .Projects img {
+            width: 25vw;
+            height: auto;
+            position: relative;
+            z-index: 2; 
+        }
+        .Projects .Foundation{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            top: 80px;
+            left: -650px;
+        }
+        .Projects .Lunar{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            top: -400px;
+            left: 0;
+        }
+        .Projects .Fellow{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            top: -935px;
+            left: 650px;
+        }
+        .Projects .Pong{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            top: -900px;
+            left: -650px;
+        }
+        .Projects .Hang{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            top: -1395px;
+            left: 0px;
+        }
+        .Projects .Melodies{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            top: -1890px;
+            left: 650px;
+        }
+        .Projects .All{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            top: -1850px;
+            left: -320px;
+        }
+        .Projects .Table{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            top: -2370px;
+            left: 320px;
+        }
+        .Projects h1{
+            position: relative; 
+            z-index: 2; 
+            color: white;
+            font-family: 'Mangiola' , serif;
+        }
+        .Projects h2{
+            font-size: 3em;
+            color: white;
+            font-family: 'Mangiola' , serif;
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            top: 20px;
+            left: 50px;
+            z-index: 2;
+            text-align: center;
+        }
+        .Projects h4 {
+            position: relative; 
+            z-index: 2; 
+            color: white;
+            max-width: 25vw;
+            font-family: 'Belgiano' , serif;
+            left: 10px;
+            text-align: center;
+        }
+        li a {
+            list-style-type: none;
+            text-decoration: none;
+            z-index: 2;
+        }
+        .Projects img:not(.background):hover{
+            transform: scale(1.05);
+            box-shadow: rgba(158, 158, 158, 0.678);
+            transition: transform 0.5s ease,box-shadow 0.5s ease;
+            text-shadow: 2px 2px 5px rgba(196, 196, 196, 0.8);
+            transition: text-shadow 0.5s ease;
+        }
+        .ContactSection{
+            position: relative; 
+            width: 100%;
+            height: auto; 
+            padding: 20px;
+            background: black;
+            color: white; 
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        .ContactSection img{
+            position: absolute; 
+            top: 0;
+            left: 0;
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover;
+            z-index: 1; 
+            filter: brightness(75%) blur(10px); 
+        }
+        .ContactSection h1{
+            position: relative;
+            z-index: 2;
+            font-size: 3em;
+            color: white;
+            font-family: 'Mangiola' , serif;
+            margin: 0;
+            z-index: 2;
+            padding-bottom: 50px;
+        }
+        .ContactSection label{
+            position: relative;
+            z-index: 2;
+            font-family: 'Belgiano' , serif;
+            font-size: 1.2em;
+        }
+        .ContactSection input{
+            position: relative;
+            z-index: 2;
+            border-radius: 4px;   
+        }
+    </style>
+    <!--I need to add a quick javascript function so that when the page is refreshed you are automatically placed back to the top of the page instead of being automatically scrolled to a random section-->
+    <script>
+        // This tells it to scroll to the top of the page when it loads
+        window.onload = () => {
+            // Check if the user is not already at the top
+            if (window.scrollY !== 0) {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+    
+            // Remove the fragment identifier (#about) from the URL without refreshing
+            if (window.location.hash) {
+                history.replaceState(null, null, ' ');
+            }
+        };
+    </script>
+    <body>
+        <!--Lets add some titles and subheadings-->
+        <!--I am going to divide this website into sections and classes now to give me more control when styling-->
+        <!--Lets add buttons to the header-->
+    <section class="header">
+        <header>
+        <h1>My Portfolio</h1>
+        <h2>Noah Walker</h2>
+        <h3>Beginner Programer</h3>
+        <img src="cool-background.png">
+        <a href="#about"></a>
+        <button class="About" onclick="location.href='#about'">About Me</button>
+        <a href="#Projects"></a>
+        <button class="Gallery" onclick="location.href='#Projects'">Gallery</button>
+        <a href="#Contact"></a>
+        <button class="Contact" onclick="location.href='#Contact'">Contact Me</button>
+        <a href="https://www.linkedin.com/in/noah-walker-1b229a306/"></a>
+        <button class="Linkedin" onclick="window.open('https://www.linkedin.com/in/noah-walker-1b229a306/')">linkedin</button>
+        </header>
+    </section>
+
+    <section class="about" id="about">
+        <h2>A little about me</h2>
+        <img src="IMG_6738.jpg" class="SelfPic">
+        <h3>Hi, I'm Noah! Before taking this class, I had absolutely no coding experience. 
+            My goal in enrolling in this Introduction to Programming course was to improve 
+            my ability to write expressions for Adobe After Effects and Premiere Pro, tools 
+            I regularly use for video editing and motion design. I hoped that understanding 
+            coding principles would help streamline my workflow and open up new possibilities 
+            in the creative projects I love. While I didn’t learn as much directly applicable 
+            to those tools as I had initially hoped, I discovered something even better—a passion for coding itself.
+            This class became an unexpected journey into the world of programming, and it sparked
+            a new creative outlet for me. I found joy in solving problems through logic, building
+            projects piece by piece, and seeing how code could transform ideas into tangible results.
+            Whether it was learning how to design websites, create simple games, or bring a touch of 
+            interactivity to my work, I quickly realized that coding wasn't just about numbers and syntax—it
+            was a way to express creativity in a structured, yet limitless way.
+            Now, I see coding as a skill that complements my interests in video editing and motion design, but 
+            also stands on its own as a rewarding and exciting hobby. This course has laid the foundation for me
+            to keep exploring, learning, and growing as a coder. Whether I'm designing a visually engaging website,
+            experimenting with animations, or solving technical challenges, I’m excited to see where this combination
+            of creativity and logic can take me in the future.</h3>
+            <a href="#Projects"></a>
+            <button onclick="location.href='#Projects'">Gallery</button>
+            <img src="cool-backgroundWhite.png">
+        </section>
+        <!--Lets create the links and a quick descirption to all my projects-->
+    <section class="Projects" id="Projects">
+        <h2>My Projects</h2>
+        <div class="Foundation">
+        <h1>The Foundation</h1>
+        <li><a href="The Foundation/index.html"><img src="TheFoundation.png"></a></li>
+        <h4>The Foundation marked the beginning of my programming journey and my very first coding project. It introduced me to the fundamentals of web development, laying the groundwork for everything that followed. Completing this project wasn’t just an academic milestone—it sparked a genuine excitement for coding. It gave me the confidence to dive into future assignments with curiosity and enthusiasm.</h4>
+        </div>
+        <div class="Lunar">
+        <h1>Lunar Outpost</h1>
+        <li><a href="JavaFoundations/index.html"><img src="LunarOutpost.png"></a></li>
+        <h4>This project was my first experience working with JavaScript, where we were tasked with building a functional game. Following along with the professor’s guidance helped me understand key programming concepts, but the real highlight was adding my own creative touches. It was rewarding to see my ideas come to life in the game, proving that even as a beginner, I could make something uniquely mine. This assignment solidified my interest in JavaScript and its potential for creating interactive experiences.</h4>
+        </div>
+        <div class="Fellow">
+        <h1>Fellowship of the Ring Application</h1>
+        <li><a href="User Input Validation/index.html"><img src="FellowshipAp.png"></a></li>
+        <h4>This assignment focused on input validation, ensuring user inputs followed specific rules and guidelines. It was the first project where I truly made the code my own, adding unique features that went beyond the initial requirements. I also leaned into my Lord of the Rings inspiration, using styling and thematic choices to bring extra creativity to the project. It was exciting to create something that reflected my personality while developing practical skills that I can apply to real-world coding challenges. This assignment really made me feel like I was starting to find my footing in programming.</h4>
+        </div>
+        <div class="Pong">
+        <h1>Pong</h1>
+        <li><a href="Events/index.html"><img src="pong.png"></a></li>
+        <h4>In this assignment, we created a simple game using JavaScript, and I was able to finish the project before the class demo was even completed. Completing it ahead of schedule gave me a strong sense of accomplishment and boosted my confidence in my programming skills. I was even able to assist the professor with troubleshooting, which reinforced my understanding of the concepts. This project was a key moment where I began to feel more confident in my abilities as a coder.</h4>
+        </div>
+        <div class="Hang">
+        <h1>Hangman</h1>
+        <li><a href="Strings/index.html"><img src="HangMan.png"></a></li>
+        <h4>In this assignment, we explored string manipulation by developing a classic Hangman game. The project gave me hands-on experience in working with strings, teaching me how to handle inputs, process data, and display results dynamically. Following the professor’s guidance allowed me to create a fully functional game while building a strong foundation for more advanced concepts. It was exciting to see how simple logic could create an engaging experience.</h4>
+        </div>
+        <div class="Melodies">
+        <h1>Melodies of the Shire</h1>
+        <li><a href="Adding Sound/index.html"><img src="Melodies.png"></a></li>
+        <h4>This project challenged us to enhance a website by incorporating audio elements, making it more dynamic and interactive. As a fan of The Lord of the Rings, I couldn’t resist creating a themed design inspired by the books I had just finished reading. Adding sound brought the immersive world of Middle-earth to life, blending my technical skills with my love for storytelling. This project was a perfect example of how programming can be a creative outlet.</h4>
+        </div>
+        <div class="All">
+        <h1>One Jounrey to Rule them All</h1>
+        <li><a href="All Together/index.html"><img src="AllTogether.png"></a></li>
+        <h4>This was hands down my favorite project in the course, as it gave us complete creative freedom. I designed a Lord of the Rings-inspired game that pushed my coding skills to new heights, from logic design to visual execution. The process was challenging but deeply rewarding, and completing it on time felt like a true accomplishment. While the game works beautifully, I noticed my CSS placements need adjustment for better responsiveness—something I’m eager to refine. This project showcased how far I had come and how much further I could go.</h4>
+        </div>
+        <div class="Table">
+        <h1>Tables of Middle-Earth</h1>
+        <li><a href="table/index.html"><img src="Tables.png"></a></li>
+        <h4>In this assignment, we focused on mastering HTML tables and their practical applications. To make it more exciting, I infused a Lord of the Rings theme, inspired by my recent journey through the books. This added a personal touch and made the project feel less like an exercise and more like a creative endeavor. It was a fun way to blend technical skills with a subject I’m passionate about, demonstrating how coding can bring ideas to life.</h4>
+        </div>
+        <img src="cool-background.png" class="background">
+    </section>
+        <!--Let me add a fake lil contact spot just to add a bit more professionalism to my website-->
+    <section class="Contact" id="Contact">
+        <section class="ContactSection">
+        <h1>Get in Touch</h1>
+        <label>Email</label><br>
+        <input type="text" id="Email"><br><br>
+        <label>First Name</label><br>
+        <input type="text" id="FirstName"><br><br>
+        <label>Last Name</label><br>
+        <input type="text" id="LastName"><br><br>
+        <label>Type Your Message here</label><br>
+        <input type="text" id="Message"><br><br>
+        <img src="cool-backgroundWhite.png">
+    </section>
+    </section>
+    </body>
+
+</html>
